@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>BroadcastR - Free Online Radio</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet"
+href="https://broadcastrassets.rosewoodpens.repl.co/style.css" type="text/css">
+  </head>
+  <body>
+    <h1>Listening...</h1>
+    <input type="text" placeholder="Frequency"></input>
+    <br>
+    Volume: 
+    <div class="slidecontainer">
+      <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+      <div id="demo">
+        50
+      </div>
+    </div>
+    <br>
+    Station: <div id="stationname">No station</div>
+    <script>
+      var slider = document.getElementById("myRange");
+      var output = document.getElementById("demo");
+      output.innerHTML = slider.value; // Display the default slider value
+
+      // Update the current slider value (each time you drag the slider handle)
+      slider.oninput = function() {
+        output.innerHTML = this.value;
+      }
+    </script>
+  </body>
+</html>
